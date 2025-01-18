@@ -3,16 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.MainView"
              xmlns:converters="clr-namespace:SeguridadInformatica.Converters"
-             Title="MainView">
-    
+             Title="Seguridad Informatica Niños">
+
     <ContentPage.Resources>
         <converters:ColorConverter x:Key="ColorConverter" />
     </ContentPage.Resources>
 
     <Grid Margin="15" RowDefinitions=".1*,.3*,.7*">
-        <Label StyleClass="DarkBlue, Header" Text="My Tasks" />
+        <Label StyleClass="DarkBlue, Header" Text="Seguridad Informatica" />
         <Grid Grid.Row="1" RowDefinitions=".2*, .8*">
-            <Label StyleClass="LightBlue, SubHeader" Text="CATEGORIES" />
+            <Label StyleClass="LightBlue, SubHeader" Text="Progreso del Aprendizaje" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" />
@@ -32,7 +32,7 @@
             </CollectionView>
         </Grid>
         <Grid Grid.Row="2" RowDefinitions=".2*, .8*">
-            <Label StyleClass="LightBlue,SubHeader" Text="PENDING TASKS" />
+            <Label StyleClass="LightBlue,SubHeader" Text="Tareas Pendientes" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}"
                             ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemTemplate>

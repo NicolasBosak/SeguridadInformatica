@@ -32,19 +32,25 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 new Category
                 {
                     Id = 1,
-                    CategoryName = ".NET MAUI Course",
+                    CategoryName = "Cuidado con las Contraseñas",
                     Color = "#CF14DF"
                 },
                 new Category
                 {
                     Id= 2,
-                    CategoryName = "Tutorials",
+                    CategoryName = "No Hables con Extraños en Línea",
                     Color = "#df6f14"
                 },
                 new Category
                 {
                     Id = 3,
-                    CategoryName = "Shopping",
+                    CategoryName = "Reconoce el Contenido Falso o Peligroso",
+                    Color = "#14df80"
+                },
+                new Category
+                {
+                    Id = 4,
+                    CategoryName = "Actualiza y Protege tus Dispositivos",
                     Color = "#14df80"
                 }
             };

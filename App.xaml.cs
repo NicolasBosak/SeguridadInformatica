@@ -7,7 +7,7 @@ namespace SeguridadInformatica
         public App()
         {
             InitializeComponent();
-            MainPage = new MainView();
+            MainPage = new NavigationPage(new MainView());
         }
     }
 }
