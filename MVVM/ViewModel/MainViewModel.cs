@@ -1,4 +1,5 @@
-﻿using SeguridadInformatica.MVVM.Models;
+﻿using PropertyChanged;
+using SeguridadInformatica.MVVM.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SeguridadInformatica.MVVM.ViewModel
 {
+    [AddINotifyPropertyChangedInterface]
     public class MainViewModel
     {
         public ObservableCollection<Category> Categories { get; set; }
@@ -17,6 +19,11 @@ namespace SeguridadInformatica.MVVM.ViewModel
         public MainViewModel()
         {
             FillData();
+            Tasks.CollectionChanged += Tasks_CollectionChanged;
+        }
+        private void Tasks_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            UpdateData();
         }
         private void FillData()
         {
