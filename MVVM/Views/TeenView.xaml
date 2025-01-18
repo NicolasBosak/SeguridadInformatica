@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SeguridadInformatica.MVVM.Views.MainView"
+             x:Class="SeguridadInformatica.MVVM.Views.TeenView"
              xmlns:converters="clr-namespace:SeguridadInformatica.Converters"
-             Title="Seguridad Informatica Niños">
-
+             Title="Seguridad Informatica Adolecentes">
     <ContentPage.Resources>
         <converters:ColorConverter x:Key="ColorConverter" />
     </ContentPage.Resources>
@@ -13,7 +12,7 @@
         <Label StyleClass="DarkBlue, Header" Text="Seguridad Informatica" />
         <Grid Grid.Row="1" RowDefinitions=".2*, .8*">
             <Label StyleClass="LightBlue, SubHeader" Text="Progreso del Aprendizaje" />
-            <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
+            <CollectionView Grid.Row="1" ItemsSource="{Binding CategoriesTeen}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" />
                 </CollectionView.ItemsLayout>
@@ -33,7 +32,7 @@
         </Grid>
         <Grid Grid.Row="2" RowDefinitions=".2*, .8*">
             <Label StyleClass="LightBlue,SubHeader" Text="Tareas Pendientes" />
-            <CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}"
+            <CollectionView Grid.Row="1" ItemsSource="{Binding TasksTeen}"
                             ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

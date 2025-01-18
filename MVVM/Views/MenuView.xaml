@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeguridadInformatica.MVVM.Views.MenuView"
+             Title="Menú Principal">
+
+    <Grid RowDefinitions="*, *, *" Padding="20" RowSpacing="15">
+        <!-- Botón 1: Curso para Niños -->
+        <Button 
+            Grid.Row="0"
+            Text="Curso para Niños" 
+            FontSize="20"
+            BackgroundColor="#1A73E8"
+            TextColor="White"
+            CornerRadius="10"
+            Margin="0,10"
+            Command="{Binding NavigateToMainView}" />
+
+        <!-- Botón 2: Curso para Adolescentes -->
+        <Button 
+            Grid.Row="1"
+            Text="Curso para Adolescentes" 
+            FontSize="20"
+            BackgroundColor="#34A853"
+            TextColor="White"
+            CornerRadius="10"
+            Margin="0,10"
+            Command="{Binding NavigateToTeenView}" />
+
+        <!-- Botón 3: Curso para Adultos -->
+        <Button 
+            Grid.Row="2"
+            Text="Curso para Adultos" 
+            FontSize="20"
+            BackgroundColor="#EA4335"
+            TextColor="White"
+            CornerRadius="10"
+            Margin="0,10"
+            Command="{Binding NavigateToAdultView}" />
+    </Grid>
+</ContentPage>
+
