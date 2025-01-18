@@ -13,6 +13,7 @@ namespace SeguridadInformatica.MVVM.Models
         public string TaskName { get; set; }
         public bool Completed { get; set; }
         public int CategoryId { get; set; }
+        public string TargetPage { get; set; }
         public string TaskColor { get; set; }
     }
 }

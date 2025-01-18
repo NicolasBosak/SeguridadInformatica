@@ -39,7 +39,7 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 {
                     Id= 2,
                     CategoryName = "Uso Seguro de Contraseñas",
-                    Color = "#df6f14"
+                    Color = "#FFA500"
                 },
                 new CategoryAdult
                 {
@@ -51,43 +51,43 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 {
                     Id = 4,
                     CategoryName = "Seguridad en Dispositivos Móviles",
-                    Color = "#14df80"
+                    Color = "#0000FF"
                 },
                 new CategoryAdult
                 {
                     Id = 5,
                     CategoryName = "Phishing",
-                    Color = "#14df80"
+                    Color = "#FF69B4"
                 },
                 new CategoryAdult
                 {
                     Id = 6,
                     CategoryName = "Actualizaciones de Software",
-                    Color = "#14df80"
+                    Color = "#800080"
                 },
                 new CategoryAdult
                 {
                     Id = 7,
                     CategoryName = "Seguridad en Compras en Línea",
-                    Color = "#14df80"
+                    Color = "#FFD700"
                 },
                 new CategoryAdult
                 {
                     Id = 8,
                     CategoryName = "Uso Seguro de Wi-Fi Público",
-                    Color = "#14df80"
+                    Color = "#DC143C"
                 },
                 new CategoryAdult
                 {
                     Id = 9,
                     CategoryName = "Ciberacoso y Fraude",
-                    Color = "#14df80"
+                    Color = "#DC143C"
                 },
                 new CategoryAdult
                 {
                     Id = 10,
                     CategoryName = "Seguridad en la Nube",
-                    Color = "#14df80"
+                    Color = "#8A2BE2"
                 }
             };
 

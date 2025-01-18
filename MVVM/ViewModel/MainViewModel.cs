@@ -1,11 +1,13 @@
 ﻿using PropertyChanged;
 using SeguridadInformatica.MVVM.Models;
+using SeguridadInformatica.Pages.KidClass;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace SeguridadInformatica.MVVM.ViewModel
 {
@@ -51,7 +53,13 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 {
                     Id = 4,
                     CategoryName = "Actualiza y Protege tus Dispositivos",
-                    Color = "#14df80"
+                    Color = "#0000FF"
+                },
+                new Category
+                {
+                    Id = 5,
+                    CategoryName = "Seguridad en Juegos en Líneas",
+                    Color = "#FF69B4"
                 }
             };
 
@@ -59,50 +67,69 @@ namespace SeguridadInformatica.MVVM.ViewModel
                {
                     new MyTask
                     {
-                         TaskName = "Upload exercise files",
+                         TaskName = "No Compartir Contraseñas",
                          Completed = false,
                          CategoryId = 1
                     },
                     new MyTask
                     {
-                         TaskName = "Plan next course",
+                         TaskName = "Crear Contraseñas Fuertes",
                          Completed = false,
                          CategoryId = 1
                     },
                     new MyTask
                     {
-                         TaskName = "Upload new ASP.NET video on YouTube",
+                         TaskName = "No Compartir Información Personal",
                          Completed = false,
                          CategoryId = 2
                     },
                     new MyTask
                     {
-                         TaskName = "Fix Settings.cs class of the project",
+                         TaskName = "Identificar Qué Información es Privada",
                          Completed = false,
                          CategoryId = 2
                     },
                     new MyTask
                     {
-                         TaskName = "Update github repository",
-                         Completed = true,
-                         CategoryId = 2
-                    },
-                    new MyTask
-                    {
-                         TaskName = "Buy eggs",
+                         TaskName = "No Todo en Internet es Real",
                          Completed = false,
                          CategoryId = 3
                     },
                     new MyTask
                     {
-                         TaskName = "Go for the pepperoni pizza",
+                         TaskName = "Identificar Señales de Alerta",
                          Completed = false,
                          CategoryId = 3
                     },
+                    new MyTask
+                    {
+                         TaskName = "Las Actualizaciones Mantienen los Dispositivos Seguros",
+                         Completed = false,
+                         CategoryId = 4
+                    },
+                    new MyTask
+                    {
+                         TaskName = "Los Antivirus Mantienen los Dispositivos Seguros",
+                         Completed = false,
+                         CategoryId = 4
+                    },
+                    new MyTask
+                    {
+                         TaskName = "Jugar de Manera Segura",
+                         Completed = false,
+                         CategoryId = 5
+                    },
+                    new MyTask
+                    {
+                         TaskName = "Proteger tu Informacion",
+                         Completed = false,
+                         CategoryId = 5
+                    }
                };
 
             UpdateData();
         }
+
         public void UpdateData()
         {
             foreach (var c in Categories)

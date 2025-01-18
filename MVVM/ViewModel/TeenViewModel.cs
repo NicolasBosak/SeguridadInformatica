@@ -29,65 +29,65 @@ namespace SeguridadInformatica.MVVM.ViewModel
         {
             CategoriesTeen = new ObservableCollection<CategoryTeen>
             {
-                new CategoryTeen
-                {
+                new CategoryTeen 
+                { 
                     Id = 1,
-                    CategoryName = "Pishing",
-                    Color = "#CF14DF"
+                    CategoryName = "Phishing",
+                    Color = "#CF14DF" 
                 },
                 new CategoryTeen
-                {
-                    Id= 2,
+                { 
+                    Id = 2, 
                     CategoryName = "Contraseñas Seguras",
-                    Color = "#df6f14"
+                    Color = "#FFA500" 
                 },
-                new CategoryTeen
-                {
-                    Id = 3,
+                new CategoryTeen 
+                { 
+                    Id = 3, 
                     CategoryName = "Privacidad en Redes Sociales",
-                    Color = "#14df80"
+                    Color = "#008000" 
                 },
-                new CategoryTeen
-                {
+                new CategoryTeen 
+                { 
                     Id = 4,
-                    CategoryName = "Seguridad en Dispositivos Moviles",
-                    Color = "#14df80"
+                    CategoryName = "Seguridad en Dispositivos Móviles",
+                    Color = "#0000FF" 
                 },
                 new CategoryTeen
-                {
-                    Id = 5,
+                { 
+                    Id = 5, 
                     CategoryName = "Uso Seguro de Wi-Fi Público",
-                    Color = "#14df80"
+                    Color = "#FF69B4"
                 },
-                new CategoryTeen
-                {
-                    Id = 6,
+                new CategoryTeen 
+                { 
+                    Id = 6, 
                     CategoryName = "Ciberacoso",
-                    Color = "#14df80"
+                    Color = "#800080" 
                 },
-                new CategoryTeen
-                {
-                    Id = 7,
+                new CategoryTeen 
+                { 
+                    Id = 7, 
                     CategoryName = "Descargas Seguras",
-                    Color = "#14df80"
+                    Color = "#FFD700"
+                },
+                new CategoryTeen 
+                {
+                    Id = 8, 
+                    CategoryName = "Actualizaciones de Software", 
+                    Color = "#DC143C"
                 },
                 new CategoryTeen
-                {
-                    Id = 8,
-                    CategoryName = "Actualizaciones de Software",
-                    Color = "#14df80"
-                },
-                new CategoryTeen
-                {
-                    Id = 9,
+                { 
+                    Id = 9, 
                     CategoryName = "Seguridad en la Nube",
-                    Color = "#14df80"
+                    Color = "#DC143C"
                 },
-                new CategoryTeen
-                {
+                new CategoryTeen 
+                { 
                     Id = 10,
-                    CategoryName = "Ingenieria Social",
-                    Color = "#14df80"
+                    CategoryName = "Ingeniería Social",
+                    Color = "#8A2BE2" 
                 }
             };
 
