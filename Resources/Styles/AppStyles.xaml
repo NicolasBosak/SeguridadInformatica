@@ -10,6 +10,12 @@
     </Style>
 
     <Style Class="LightBlue" TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource LightBlue}"
+        <Setter Property="TextColor" Value="{StaticResource LightBlue}"/>
+    </Style>
+
+    <Style Class="Header" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
     </Style>
 </ResourceDictionary>
