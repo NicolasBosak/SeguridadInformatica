@@ -1,4 +1,6 @@
-﻿namespace SeguridadInformatica
+﻿using SeguridadInformatica.MVVM.Views;
+
+namespace SeguridadInformatica
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new MainView();
         }
     }
 }
