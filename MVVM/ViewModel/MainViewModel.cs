@@ -21,21 +21,6 @@ namespace SeguridadInformatica.MVVM.ViewModel
         public ObservableCollection<Category> Categories { get; set; }
         public ObservableCollection<MyTask> Tasks { get; set; }
 
-        private bool _isAnswerCorrect;
-        public bool IsAnswerCorrect
-        {
-            get => _isAnswerCorrect;
-            set
-            {
-                if (_isAnswerCorrect != value)
-                {
-                    _isAnswerCorrect = value;
-                    OnPropertyChanged();
-                    UpdateTaskCompletion();
-                }
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ICommand NavigateToTaskPageCommand { get; }
@@ -50,20 +35,6 @@ namespace SeguridadInformatica.MVVM.ViewModel
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        // Actualizar tarea al marcar la respuesta correcta
-        private void UpdateTaskCompletion()
-        {
-            if (IsAnswerCorrect)
-            {
-                var task = Tasks.FirstOrDefault(t => t.TaskName == "No Compartir Contraseñas");
-                if (task != null)
-                {
-                    task.Completed = true;
-                    UpdateData(); // Actualiza el progreso
-                }
-            }
         }
 
         private void Tasks_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -82,6 +53,38 @@ namespace SeguridadInformatica.MVVM.ViewModel
             else if (taskName == "Crear Contraseñas Fuertes")
             {
                 await navigation.PushAsync(new Password2());
+            }
+            else if (taskName == "No Compartir Información Personal")
+            {
+                await navigation.PushAsync(new Strangers1());
+            }
+            else if (taskName == "Identificar Qué Información es Privada")
+            {
+                await navigation.PushAsync(new Strangers2());
+            }
+            else if (taskName == "No Todo en Internet es Real")
+            {
+                await navigation.PushAsync(new Content1());
+            }
+            else if (taskName == "Identificar Señales de Alerta")
+            {
+                await navigation.PushAsync(new Content2());
+            }
+            else if (taskName == "Actualizaciones")
+            {
+                await navigation.PushAsync(new Devices1());
+            }
+            else if (taskName == "Antivirus")
+            {
+                await navigation.PushAsync(new Devices2());
+            }
+            else if (taskName == "Jugar de Manera Segura")
+            {
+                await navigation.PushAsync(new Games1());
+            }
+            else if (taskName == "Proteger tu Información")
+            {
+                await navigation.PushAsync(new Games2());
             }
             else
             {

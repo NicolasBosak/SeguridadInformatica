@@ -3,10 +3,8 @@ using SeguridadInformatica.MVVM.Models;
 
 namespace SeguridadInformatica.MVVM.Views;
 
-[QueryProperty(nameof(TaskName), "TaskName")]
 public partial class Password1 : ContentPage
 {
-    public string TaskName { get; set; }
     public Password1()
 	{
 		InitializeComponent();
@@ -16,21 +14,14 @@ public partial class Password1 : ContentPage
         bool isVerdaderoChecked = checkBoxVerdadero.IsChecked;
         bool isFalsoChecked = checkBoxFalso.IsChecked;
 
-        // Verificar si la respuesta es correcta
         if (isVerdaderoChecked && !isFalsoChecked)
         {
-            // La respuesta es correcta, navega a la MainView y marca el checkbox correspondiente
             await DisplayAlert("Respuesta Correcta", "¡Correcto! Compartir contraseñas es peligroso.", "OK");
-
-            // Regresar a la MainView y pasar un parámetro indicando que la respuesta es correcta
-            await Navigation.PopAsync(); // Regresar a la MainView
-
-            // Aquí se marca el checkbox correspondiente en la MainView
+            await Navigation.PopAsync(); 
             MessagingCenter.Send(this, "RespuestaCorrecta", "No Compartir Contraseñas");
         }
         else
         {
-            // La respuesta es incorrecta
             await DisplayAlert("Respuesta Incorrecta", "Incorrecto. Compartir contraseñas sí es peligroso.", "OK");
         }
     }

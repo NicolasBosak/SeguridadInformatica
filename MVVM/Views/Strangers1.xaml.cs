@@ -1,25 +1,25 @@
 namespace SeguridadInformatica.MVVM.Views;
 
-public partial class Password2 : ContentPage
+public partial class Strangers1 : ContentPage
 {
-	public Password2()
+	public Strangers1()
 	{
 		InitializeComponent();
 	}
     private async void OnEvaluateAnswerClicked(object sender, EventArgs e)
     {
-        bool isIncorrectoChecked = checkBoxPractica1.IsChecked;
-        bool isCorrectoChecked = checkBoxPractica2.IsChecked;
+        bool isCorrectoChecked = checkBoxPractica1.IsChecked;
+        bool isIncorrectoChecked = checkBoxPractica2.IsChecked;
 
         if (isCorrectoChecked && !isIncorrectoChecked)
         {
             await DisplayAlert("Respuesta Correcta", "¡Correcto!", "OK");
             await Navigation.PopAsync();
-            MessagingCenter.Send(this, "RespuestaCorrecta", "Crear Contraseñas Fuertes");
+            MessagingCenter.Send(this, "RespuestaCorrecta", "No Compartir Información Personal");
         }
         else
         {
-            await DisplayAlert("Respuesta Incorrecta", "Esto genera contraseña debil.", "OK");
+            await DisplayAlert("Respuesta Incorrecta", "Esto es muy peligroso.", "OK");
         }
     }
 }

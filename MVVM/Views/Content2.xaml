@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SeguridadInformatica.MVVM.Views.Password2"
-             Title="Cuidado con las Contraseñas">
+             x:Class="SeguridadInformatica.MVVM.Views.Content2"
+             Title="Reconoce el Contenido Falso o Peligroso">
     <ScrollView>
         <VerticalStackLayout Padding="15" Spacing="10">
-            <Label Text="Crear Contraseñas Fuertes"
+            <Label Text="Identificar Señales de Alerta"
                    FontSize="24"
                    FontAttributes="Bold"
                    VerticalOptions="Start"
                    HorizontalOptions="Center" />
 
-            <Image Source="strongpin.jpg"
+            <Image Source="alerta.jpg"
                    HorizontalOptions="Center"
                    Aspect="AspectFit"
                    HeightRequest="200" />
 
-            <Label Text="Una contraseña fuerte ayuda a proteger tu información personal y tus cuentas en línea de accesos no autorizados. Las contraseñas débiles son más fáciles de adivinar o descifrar mediante ataques de fuerza bruta, lo que puede permitir a los atacantes acceder a tus datos sensibles. Además, una contraseña fuerte reduce el riesgo de que tus cuentas sean comprometidas en caso de que una base de datos de contraseñas sea filtrada."
+            <Label Text="Correos electrónicos sospechosos: Fíjate en errores ortográficos, gramática incorrecta, remitentes desconocidos y enlaces extraños. Los correos de phishing a menudo intentan parecer legítimos, pero suelen tener estos errores. Ofertas demasiado buenas para ser verdad: Si algo parece demasiado bueno para ser cierto, probablemente lo sea. Ofertas increíbles y premios inesperados suelen ser trampas. Enlaces y archivos adjuntos desconocidos: No hagas clic en enlaces ni descargues archivos adjuntos de fuentes desconocidas o no confiables."
                    FontSize="16"
                    LineBreakMode="WordWrap"
                    VerticalOptions="StartAndExpand" />
@@ -27,18 +27,18 @@
                    VerticalOptions="Start"
                    HorizontalOptions="Center" />
 
-            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál es una buena práctica para crear contraseñas?" />
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Una señales de alerta son los enlaces a sitios externos desconocidos?" />
 
             <VerticalStackLayout Spacing="10">
                 <HorizontalStackLayout Spacing="10">
                     <CheckBox x:Name="checkBoxPractica1" />
-                    <Label Text="Usar nombres comunes como contraseña"
+                    <Label Text="Verdadero"
                            VerticalOptions="Center" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Spacing="10">
                     <CheckBox x:Name="checkBoxPractica2" />
-                    <Label Text="Incluir números, símbolos y mayúsculas"
+                    <Label Text="Falso"
                            VerticalOptions="Center" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>

@@ -11,8 +11,6 @@ public partial class MainView : ContentPage
     {
         InitializeComponent();
         BindingContext = mainViewModel;
-
-        // Suscribirse al mensaje de respuesta correcta
         MessagingCenter.Subscribe<Password1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
         {
             if (taskName == "No Compartir Contraseñas")
@@ -25,9 +23,68 @@ public partial class MainView : ContentPage
                 }
             }
         });
+        MessagingCenter.Subscribe<Password2, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Crear Contraseñas Fuertes")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Crear Contraseñas Fuertes");
+                if (task != null)
+                {
+                    task.Completed = true; 
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Strangers1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "No Compartir Información Personal")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "No Compartir Información Personal");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Strangers2, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Identificar Qué Información es Privada")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Identificar Qué Información es Privada");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Content1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "No Todo en Internet es Real")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "No Todo en Internet es Real");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Content2, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Identificar Señales de Alerta")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Identificar Señales de Alerta");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
     }
 
-    // Método para manejar la actualización de los CheckBox
     private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         mainViewModel.UpdateData();
