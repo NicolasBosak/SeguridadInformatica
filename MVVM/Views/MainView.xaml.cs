@@ -6,6 +6,7 @@ namespace SeguridadInformatica.MVVM.Views;
 public partial class MainView : ContentPage
 {
     private MainViewModel mainViewModel = new MainViewModel();
+
     public MainView()
     {
         InitializeComponent();
@@ -17,4 +18,11 @@ public partial class MainView : ContentPage
         mainViewModel.UpdateData();
     }
 
+    private async void OnLabelTapped(object sender, EventArgs e)
+    {
+        if (sender is Label label && label.BindingContext is MyTask task)
+        {
+            await mainViewModel.NavigateToTaskPage(task.TaskName);
+        }
+    }
 }
