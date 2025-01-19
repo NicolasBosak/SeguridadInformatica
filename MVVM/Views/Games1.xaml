@@ -2,11 +2,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Games1"
-             Title="Games1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Seguridad en Juegos en Líneas">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="Jugar de Manera Segura"
+               FontSize="24"
+               FontAttributes="Bold"
+               VerticalOptions="Start"
+               HorizontalOptions="Center" />
+
+            <Image Source="games.jpg"
+               HorizontalOptions="Center"
+               Aspect="AspectFit"
+               HeightRequest="200" />
+
+            <Label Text="Para jugar en línea de manera segura, utiliza contraseñas fuertes y únicas, mantén tu software actualizado, descarga juegos de fuentes confiables, ajusta las configuraciones de privacidad, evita compartir información personal, usa conexiones seguras, activa la autenticación de dos factores, sé cauteloso con enlaces y archivos adjuntos, reporta comportamientos sospechosos y educa a tus amigos y familiares sobre la seguridad en línea. Siguiendo estos consejos, podrás disfrutar de tus juegos en línea de manera segura y proteger tu información personal."
+               FontSize="16"
+               LineBreakMode="WordWrap"
+               VerticalOptions="StartAndExpand" />
+
+            <Label Text="Que Hemos Aprendido"
+               FontSize="24"
+               FontAttributes="Bold"
+               VerticalOptions="Start"
+               HorizontalOptions="Center" />
+
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál es una medida importante para jugar en línea de manera segura?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Compartir tu información personal con otros jugadores."
+                       VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Utilizar contraseñas fuertes y únicas para tus cuentas de juegos."
+                       VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminar"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

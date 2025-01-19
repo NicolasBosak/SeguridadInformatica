@@ -2,11 +2,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Games2"
-             Title="Games2">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Seguridad en Juegos en Líneas">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="Proteger tu Información"
+               FontSize="24"
+               FontAttributes="Bold"
+               VerticalOptions="Start"
+               HorizontalOptions="Center" />
+
+            <Image Source="data.jpg"
+               HorizontalOptions="Center"
+               Aspect="AspectFit"
+               HeightRequest="200" />
+
+            <Label Text="Proteger tu información en juegos en línea es crucial para evitar una serie de riesgos. En primer lugar, al proteger tus datos personales, reduces el riesgo de robo de identidad, donde los delincuentes pueden utilizar tu información para hacerse pasar por ti y cometer fraudes. Además, proteger tu información ayuda a prevenir acosos y extorsiones en línea, ya que los atacantes no podrán acceder a detalles sensibles sobre ti."
+               FontSize="16"
+               LineBreakMode="WordWrap"
+               VerticalOptions="StartAndExpand" />
+
+            <Label Text="Que Hemos Aprendido"
+               FontSize="24"
+               FontAttributes="Bold"
+               VerticalOptions="Start"
+               HorizontalOptions="Center" />
+
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Por qué es importante proteger tu información en juegos en línea?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Para evitar el robo de identidad y mantener la seguridad de tus cuentas."
+                       VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Para compartir tus datos personales con otros jugadores."
+                       VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminar"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -83,6 +83,54 @@ public partial class MainView : ContentPage
                 }
             }
         });
+        MessagingCenter.Subscribe<Devices1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Actualizaciones")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Actualizaciones");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Devices2, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Antivirus")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Antivirus");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Games1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Jugar de Manera Segura")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Jugar de Manera Segura");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
+        MessagingCenter.Subscribe<Games2, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "Proteger tu Información")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "Proteger tu Información");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    mainViewModel.UpdateData();
+                }
+            }
+        });
     }
 
     private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)

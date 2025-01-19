@@ -2,11 +2,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Devices1"
-             Title="Devices1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Actualiza y Protege tus Dispositivos">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="Actualizaciones"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Image Source="update.jpg"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <Label Text="Las actualizaciones de software a menudo incluyen parches de seguridad que corrigen vulnerabilidades descubiertas en el sistema. Además, las actualizaciones también mejoran el rendimiento y la estabilidad de los dispositivos. Los desarrolladores constantemente trabajan para optimizar el software, corregir errores y mejorar la eficiencia. Esto significa que, al actualizar, tu dispositivo funcionará de manera más fluida y con menos problemas."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+
+            <Label Text="Que Hemos Aprendido"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Que mejoras se pueden ver tras actualizar el sistema?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Mejoras en la interfaz y nuevas funciones del dispositivo"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Parches en el sistema, correcciones de errores, etc."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminar"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

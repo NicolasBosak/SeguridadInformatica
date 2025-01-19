@@ -58,11 +58,15 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\alerta.png" />
+	  <None Remove="Resources\Images\antivirus.png" />
+	  <None Remove="Resources\Images\data.jpg" />
 	  <None Remove="Resources\Images\fake.jpg" />
+	  <None Remove="Resources\Images\games.jpg" />
 	  <None Remove="Resources\Images\information.jpg" />
 	  <None Remove="Resources\Images\NSP.jpg" />
 	  <None Remove="Resources\Images\strange.jpg" />
 	  <None Remove="Resources\Images\strongpin.jpg" />
+	  <None Remove="Resources\Images\update.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -2,11 +2,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Devices2"
-             Title="Devices2">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Actualiza y Protege tus Dispositivos">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="Antivirus"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Image Source="antivirus.jpg"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <Label Text="Contar con un antivirus es esencial para proteger tus dispositivos y datos personales de diversas amenazas cibernéticas ya que ayuda a detectar y eliminar malware, como virus, troyanos, spyware y ransomware, que pueden dañar tu sistema o robar tu información. Además, un antivirus proporciona una capa adicional de seguridad al monitorear y bloquear sitios web maliciosos, correos electrónicos de phishing y descargas sospechosas.."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+
+            <Label Text="Que Hemos Aprendido"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Escoge cual es una amenza para tus dispositivos?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="VMWare, Banware."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Troyano, Spyware."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminar"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
