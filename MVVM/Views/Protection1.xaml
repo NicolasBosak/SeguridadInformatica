@@ -2,11 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Protection1"
-             Title="Protection1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Protección Contra Estafas en Línea">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <Label Text="¿Qué son las estafas en línea?"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Image Source="mail.png"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <Label Text="Las estafas en línea son intentos de engaño realizados a través de internet para obtener dinero, información personal o acceso a tus cuentas. Estas estafas suelen disfrazarse como ofertas tentadoras, premios falsos, mensajes urgentes o incluso correos electrónicos que imitan a empresas confiables."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+
+            <Label Text="Tipos comunes de estafas:"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start" />
+
+            <Label Text="• Estafas de soporte técnico: Recibes un mensaje indicando que tu dispositivo está infectado y necesitas pagar para arreglarlo."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+            <Label Text="• Estafas de inversión: Ofrecen ganancias rápidas y garantizadas para que inviertas en negocios o criptomonedas falsas."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+            <Label Text="• Falsas ventas en línea: Sitios web que venden productos inexistentes o con precios sospechosamente bajos."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+
+            <Label Text="Consejos prácticos para protegerte:"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start" />
+
+            <Label Text="1. No confíes en mensajes que te presionen para actuar de inmediato."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+            <Label Text="2. Nunca compartas información personal ni financiera a través de correos electrónicos o mensajes no solicitados."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+            <Label Text="3. Usa herramientas como verificadores de URL o extensiones de seguridad en tu navegador."
+                   FontSize="16"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand" />
+
+            <Label Text="Que Hemos Aprendido"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cual es un tipo comun de estafa?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Estafa de publicidad engañosa."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Estafa de soporte tecnico."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Terminar"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

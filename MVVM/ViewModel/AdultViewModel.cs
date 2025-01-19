@@ -119,7 +119,7 @@ namespace SeguridadInformatica.MVVM.ViewModel
             CategoriesAdult = new ObservableCollection<CategoryAdult>
             {
                 new CategoryAdult{Id = 1, CategoryName = "Protección Contra Estafas en Línea", Color = "#CF14DF"},
-                new CategoryAdult{Id= 2, CategoryName = "Uso Seguro de Contraseñas", Color = "#FFA500"},
+                new CategoryAdult{Id = 2, CategoryName = "Uso Seguro de Contraseñas", Color = "#FFA500"},
                 new CategoryAdult{Id = 3, CategoryName = "Privacidad en Redes Sociales", Color = "#14df80"},
                 new CategoryAdult{Id = 4, CategoryName = "Seguridad en Dispositivos Móviles", Color = "#0000FF"},
                 new CategoryAdult{Id = 5, CategoryName = "Phishing", Color = "#FF69B4"},

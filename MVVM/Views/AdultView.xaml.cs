@@ -10,6 +10,18 @@ public partial class AdultView : ContentPage
     {
         InitializeComponent();
         BindingContext = adultViewModel;
+        MessagingCenter.Subscribe<Protection1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "¿Qué son las estafas en línea?")
+            {
+                var task = adultViewModel.TasksAdult.FirstOrDefault(t => t.TaskName == "¿Qué son las estafas en línea?");
+                if (task != null)
+                {
+                    task.Completed = true; // Marcar la tarea como completada
+                    adultViewModel.UpdateData(); // Actualizar el progreso
+                }
+            }
+        });
     }
 
     private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
