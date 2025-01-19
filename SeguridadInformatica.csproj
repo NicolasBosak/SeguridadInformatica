@@ -110,6 +110,9 @@
 	  <MauiXaml Update="MVVM\Views\Password2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Protection1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\Strangers1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

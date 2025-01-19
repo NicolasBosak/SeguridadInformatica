@@ -4,7 +4,7 @@
              x:Class="SeguridadInformatica.MVVM.Views.AdultView"
              xmlns:converters="clr-namespace:SeguridadInformatica.Converters"
              Title="Seguridad Informatica Adultos">
-    
+
     <ContentPage.Resources>
         <converters:ColorConverter x:Key="ColorConverter" />
     </ContentPage.Resources>
@@ -34,7 +34,7 @@
         <Grid Grid.Row="2" RowDefinitions=".2*, .8*">
             <Label StyleClass="LightBlue,SubHeader" Text="Tareas Pendientes" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding TasksAdult}"
-                            ItemsUpdatingScrollMode="KeepLastItemInView">
+                ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="Transparent">
@@ -54,6 +54,9 @@
                                             <Setter Property="TextDecorations" Value="Strikethrough" />
                                         </DataTrigger>
                                     </Label.Triggers>
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnLabelTapped" />
+                                    </Label.GestureRecognizers>
                                 </Label>
                             </HorizontalStackLayout>
                         </Frame>
@@ -62,5 +65,4 @@
             </CollectionView>
         </Grid>
     </Grid>
-
 </ContentPage>
