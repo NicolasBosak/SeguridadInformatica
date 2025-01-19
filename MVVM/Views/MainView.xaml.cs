@@ -11,8 +11,21 @@ public partial class MainView : ContentPage
     {
         InitializeComponent();
         BindingContext = mainViewModel;
+        MessagingCenter.Subscribe<Password1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
+        {
+            if (taskName == "No Compartir Contraseñas")
+            {
+                var task = mainViewModel.Tasks.FirstOrDefault(t => t.TaskName == "No Compartir Contraseñas");
+                if (task != null)
+                {
+                    task.Completed = true; // Marcar la tarea como completada
+                    mainViewModel.UpdateData(); // Actualizar el progreso
+                }
+            }
+        });
     }
 
+    // Método para manejar la actualización de los CheckBox
     private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         mainViewModel.UpdateData();
@@ -24,5 +37,12 @@ public partial class MainView : ContentPage
         {
             await mainViewModel.NavigateToTaskPage(task.TaskName);
         }
+    }
+
+    // Asegurarse de desuscribirse de los mensajes cuando la página se destruya
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        MessagingCenter.Unsubscribe<Password1, string>(this, "RespuestaCorrecta");
     }
 }

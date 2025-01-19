@@ -43,7 +43,7 @@ namespace SeguridadInformatica.MVVM.ViewModel
             }
             else if (taskName == "Crear Contraseñas Fuertes")
             {
-                await navigation.PushAsync(new Password1());
+                await navigation.PushAsync(new Password2());
             }
             else
             {

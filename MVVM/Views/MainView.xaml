@@ -39,14 +39,12 @@
                     <DataTemplate>
                         <Frame BorderColor="Transparent">
                             <HorizontalStackLayout>
-                                <!-- CheckBox -->
                                 <CheckBox
                                     x:Name="checkBox"
                                     CheckedChanged="checkBox_CheckedChanged"
                                     IsChecked="{Binding Completed}"
                                     VerticalOptions="Center"
                                     Color="{Binding TaskColor, Converter={StaticResource ColorConverter}}" />
-                                <!-- Label con evento Tapped -->
                                 <Label Text="{Binding TaskName}" VerticalOptions="Center">
                                     <Label.Triggers>
                                         <DataTrigger
