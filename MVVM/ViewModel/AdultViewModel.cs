@@ -43,39 +43,71 @@ namespace SeguridadInformatica.MVVM.ViewModel
             }
             else if (taskName == "Cómo Evitar Estafas en Internet")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Protection2());
             }
             else if (taskName == "¿Por qué son importantes las contraseñas fuertes?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Security1());
             }
             else if (taskName == "Como crear contraseñas fuertes")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Security2());
             }
             else if (taskName == "Riesgos de Compartir Demasiado en Redes Sociales")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Privacity1());
             }
             else if (taskName == "Recomendaciones para proteger tu información")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Privacity2());
             }
             else if (taskName == "¿Por qué es importante proteger tu celular?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Mobile1());
             }
             else if (taskName == "Cómo Proteger mi Celular de Malware y Hacker")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Mobile2());
             }
             else if (taskName == "¿Qué es el phishing?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Pishing1());
             }
             else if (taskName == "Cómo Evitar Ataques de Phishing")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Pishing2());
+            }
+            else if (taskName == "¿Por qué son importantes las actualizaciones?")
+            {
+                await navigation.PushAsync(new Software1());
+            }
+            else if (taskName == "Ventajas y Desventaja de Actualizar")
+            {
+                await navigation.PushAsync(new Software2());
+            }
+            else if (taskName == "Cómo Comprar de Forma Segura en Internet")
+            {
+                await navigation.PushAsync(new Shopp1());
+            }
+            else if (taskName == "¿Cómo evitar fraudes en compras por internet?")
+            {
+                await navigation.PushAsync(new Shopp2());
+            }
+            else if (taskName == "Riesgos de Usar Redes Wi-Fi Abiertas")
+            {
+                await navigation.PushAsync(new Wifi1());
+            }
+            else if (taskName == "¿Cómo Protegerme para Navegar Seguro al usar una Red WiFi Pública?")
+            {
+                await navigation.PushAsync(new Wifi2());
+            }
+            else if (taskName == "¿Qué es la nube?")
+            {
+                await navigation.PushAsync(new Cloud1());
+            }
+            else if (taskName == "La Seguridad en la Nube")
+            {
+                await navigation.PushAsync(new Cloud2());
             }
             else
             {
@@ -93,9 +125,8 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 new CategoryAdult{Id = 5, CategoryName = "Phishing", Color = "#FF69B4"},
                 new CategoryAdult{Id = 6, CategoryName = "Actualizaciones de Software", Color = "#800080"},
                 new CategoryAdult{Id = 7, CategoryName = "Seguridad en Compras en Línea", Color = "#FFD700"},
-                new CategoryAdult{Id = 8, CategoryName = "Uso Seguro de Wi-Fi Público", Color = "#0000FF"},
-                new CategoryAdult{Id = 9, CategoryName = "Ciberacoso y Fraude", Color = "#DC143C"},
-                new CategoryAdult{Id = 10, CategoryName = "Seguridad en la Nube", Color = "#8A2BE2"}
+                new CategoryAdult{Id = 8, CategoryName = "Uso Seguro de Wi-Fi Público", Color = "#DC143C"},
+                new CategoryAdult{Id = 9, CategoryName = "Seguridad en la Nube", Color = "#8A2BE2"}
             };
 
             TasksAdult = new ObservableCollection<MyTaskAdult>
@@ -116,10 +147,8 @@ namespace SeguridadInformatica.MVVM.ViewModel
                     new MyTaskAdult{TaskName = "¿Cómo evitar fraudes en compras por internet?", Completed = false, CategoryId = 7},
                     new MyTaskAdult{TaskName = "Riesgos de Usar Redes Wi-Fi Abiertas", Completed = false, CategoryId = 8},
                     new MyTaskAdult{TaskName = "¿Cómo Protegerme para Navegar Seguro al usar una Red WiFi Pública?", Completed = false, CategoryId = 8},
-                    new MyTaskAdult{TaskName = "¿Qué es el ciberacoso?", Completed = false, CategoryId = 9},
-                    new MyTaskAdult{TaskName = "Qué Debe Hacer si es Víctima de Ciberacoso", Completed = false, CategoryId = 9},
-                    new MyTaskAdult{TaskName = "¿Qué es la nube?", Completed = false, CategoryId = 10},
-                    new MyTaskAdult{TaskName = "La Seguridad en la Nube", Completed = false, CategoryId = 10},
+                    new MyTaskAdult{TaskName = "¿Qué es la nube?", Completed = false, CategoryId = 9},
+                    new MyTaskAdult{TaskName = "La Seguridad en la Nube", Completed = false, CategoryId = 9},
                };
 
             UpdateData();
