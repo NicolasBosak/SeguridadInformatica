@@ -9,15 +9,34 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.Maui.Controls;
 using SeguridadInformatica.MVVM.Views;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace SeguridadInformatica.MVVM.ViewModel
 {
     [AddINotifyPropertyChangedInterface]
 
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<Category> Categories { get; set; }
         public ObservableCollection<MyTask> Tasks { get; set; }
+
+        private bool _isAnswerCorrect;
+        public bool IsAnswerCorrect
+        {
+            get => _isAnswerCorrect;
+            set
+            {
+                if (_isAnswerCorrect != value)
+                {
+                    _isAnswerCorrect = value;
+                    OnPropertyChanged();
+                    UpdateTaskCompletion();
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public ICommand NavigateToTaskPageCommand { get; }
 
@@ -26,6 +45,25 @@ namespace SeguridadInformatica.MVVM.ViewModel
             FillData();
             Tasks.CollectionChanged += Tasks_CollectionChanged;
             NavigateToTaskPageCommand = new Command<string>(async (taskName) => await NavigateToTaskPage(taskName));
+        }
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // Actualizar tarea al marcar la respuesta correcta
+        private void UpdateTaskCompletion()
+        {
+            if (IsAnswerCorrect)
+            {
+                var task = Tasks.FirstOrDefault(t => t.TaskName == "No Compartir Contraseñas");
+                if (task != null)
+                {
+                    task.Completed = true;
+                    UpdateData(); // Actualiza el progreso
+                }
+            }
         }
 
         private void Tasks_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -50,8 +88,6 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 Console.WriteLine($"No se encontró una página para la tarea: {taskName}");
             }
         }
-
-
 
         private void FillData()
         {

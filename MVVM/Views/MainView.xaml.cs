@@ -11,6 +11,8 @@ public partial class MainView : ContentPage
     {
         InitializeComponent();
         BindingContext = mainViewModel;
+
+        // Suscribirse al mensaje de respuesta correcta
         MessagingCenter.Subscribe<Password1, string>(this, "RespuestaCorrecta", (sender, taskName) =>
         {
             if (taskName == "No Compartir Contraseñas")
@@ -37,12 +39,5 @@ public partial class MainView : ContentPage
         {
             await mainViewModel.NavigateToTaskPage(task.TaskName);
         }
-    }
-
-    // Asegurarse de desuscribirse de los mensajes cuando la página se destruya
-    protected override void OnDisappearing()
-    {
-        base.OnDisappearing();
-        MessagingCenter.Unsubscribe<Password1, string>(this, "RespuestaCorrecta");
     }
 }

@@ -16,6 +16,7 @@ public partial class Password1 : ContentPage
         bool isVerdaderoChecked = checkBoxVerdadero.IsChecked;
         bool isFalsoChecked = checkBoxFalso.IsChecked;
 
+        // Verificar si la respuesta es correcta
         if (isVerdaderoChecked && !isFalsoChecked)
         {
             // La respuesta es correcta, navega a la MainView y marca el checkbox correspondiente
@@ -33,5 +34,4 @@ public partial class Password1 : ContentPage
             await DisplayAlert("Respuesta Incorrecta", "Incorrecto. Compartir contraseñas sí es peligroso.", "OK");
         }
     }
-
 }
