@@ -3,10 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Software2"
              Title="Software2">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="20" Padding="15">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            Text="Ventajas y Desventaja de Actualizar"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center" />
+
+        <WebView
+            HeightRequest="300"
+            Source="https://www.youtube.com/embed/K1yO73msr-o"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label StyleClass="LightBlue,SubHeader" Text="¿Es recomendable actualizar las versiones de los diferentes buscadores que usamos de forma habitual?" />
+
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica1" />
+                <Label Text="Verdadero"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica2" />
+                <Label Text="Falso"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Terminar"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnEvaluateAnswerClicked" />
     </VerticalStackLayout>
 </ContentPage>

@@ -2,11 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Shopp2"
-             Title="Shopp2">
-    <VerticalStackLayout>
+             Title="Seguridad en Compras en Línea">
+    <VerticalStackLayout Spacing="20" Padding="15">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            Text="¿Cómo evitar fraudes en compras por internet?"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center" />
+
+        <WebView
+            HeightRequest="300"
+            Source="https://www.youtube.com/embed/av6G0_TfsaM"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label StyleClass="LightBlue,SubHeader" Text="¿Que prefijo nos indica que la pagina es segura?" />
+
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica1" />
+                <Label Text="Http"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica2" />
+                <Label Text="Https"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Terminar"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnEvaluateAnswerClicked" />
     </VerticalStackLayout>
 </ContentPage>

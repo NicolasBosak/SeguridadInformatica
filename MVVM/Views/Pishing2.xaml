@@ -2,11 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Pishing2"
-             Title="Pishing2">
-    <VerticalStackLayout>
+             Title="Pishing">
+    <VerticalStackLayout Spacing="20" Padding="15">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            Text="Cómo Evitar Ataques de Phishing"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center" />
+
+        <WebView
+            HeightRequest="300"
+            Source="https://www.youtube.com/embed/UuuAlP7ay6U"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label StyleClass="LightBlue,SubHeader" Text="¿El phishing es el delito engañar a las personas para que compartan información confidencial?" />
+
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica1" />
+                <Label Text="Verdadero"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica2" />
+                <Label Text="Falso"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Terminar"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnEvaluateAnswerClicked" />
     </VerticalStackLayout>
 </ContentPage>

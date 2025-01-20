@@ -41,7 +41,7 @@ namespace SeguridadInformatica.MVVM.ViewModel
             {
                 await navigation.PushAsync(new Protection1());
             }
-            else if (taskName == "Cómo Evitar Estafas en Internet")
+            else if (taskName == "Como Evitar Estafas en Internet")
             {
                 await navigation.PushAsync(new Protection2());
             }
@@ -132,7 +132,7 @@ namespace SeguridadInformatica.MVVM.ViewModel
             TasksAdult = new ObservableCollection<MyTaskAdult>
                {
                     new MyTaskAdult{TaskName = "¿Qué son las estafas en línea?", Completed = false, CategoryId = 1},
-                    new MyTaskAdult{TaskName = "Cómo Evitar Estafas en Internet", Completed = false, CategoryId = 1},
+                    new MyTaskAdult{TaskName = "Como Evitar Estafas en Internet", Completed = false, CategoryId = 1},
                     new MyTaskAdult{TaskName = "¿Por qué son importantes las contraseñas fuertes?", Completed = false, CategoryId = 2},
                     new MyTaskAdult{TaskName = "Como crear contraseñas fuertes", Completed = false, CategoryId = 2},
                     new MyTaskAdult{TaskName = "Riesgos de Compartir Demasiado en Redes Sociales", Completed = false, CategoryId = 3},

@@ -113,19 +113,28 @@ namespace SeguridadInformatica.MVVM.ViewModel
                 new CategoryTeen{Id = 3,CategoryName = "Privacidad en Redes Sociales",Color = "#008000"},
                 new CategoryTeen{Id = 4,CategoryName = "Seguridad en Dispositivos Móviles",Color = "#0000FF"},
                 new CategoryTeen{Id = 5,CategoryName = "Ciberacoso",Color = "#800080"},
-                new CategoryTeen{Id = 7,CategoryName = "Descargas Seguras",Color = "#FFD700"},
-                new CategoryTeen{Id = 8,CategoryName = "Actualizaciones de Software",Color = "#DC143C"},
-                new CategoryTeen{Id = 9,CategoryName = "Ingeniería Social",Color = "#8A2BE2"}
+                new CategoryTeen{Id = 6,CategoryName = "Descargas Seguras",Color = "#FFD700"},
+                new CategoryTeen{Id = 7,CategoryName = "Actualizaciones de Software",Color = "#DC143C"},
+                new CategoryTeen{Id = 8,CategoryName = "Ingeniería Social",Color = "#8A2BE2"}
             };
             TasksTeen = new ObservableCollection<MyTaskTeen>
                {
-                    new MyTaskTeen{TaskName = "Upload exercise files",Completed = false,CategoryId = 1},
-                    new MyTaskTeen{TaskName = "Plan next course",Completed = false,CategoryId = 1},
-                    new MyTaskTeen{TaskName = "Upload new ASP.NET video on YouTube",Completed = false,CategoryId = 2},
-                    new MyTaskTeen{TaskName = "Fix Settings.cs class of the project",Completed = false,CategoryId = 2},
-                    new MyTaskTeen{TaskName = "Update github repository",Completed = false,CategoryId = 2},
-                    new MyTaskTeen{TaskName = "Buy eggs",Completed = false,CategoryId = 3},
-                    new MyTaskTeen{TaskName = "Go for the pepperoni pizza",Completed = false,CategoryId = 3},
+                    new MyTaskTeen{TaskName = "¿Qué es el Pishing?",Completed = false,CategoryId = 1},
+                    new MyTaskTeen{TaskName = "Como evitar el Pishing",Completed = false,CategoryId = 1},
+                    new MyTaskTeen{TaskName = "¿Porque son importantes?",Completed = false,CategoryId = 2},
+                    new MyTaskTeen{TaskName = "Como Crear una Contraseñas Segura",Completed = false,CategoryId = 2},
+                    new MyTaskTeen{TaskName = "¿Por qué importa la privacidad?",Completed = false,CategoryId = 3},
+                    new MyTaskTeen{TaskName = "Privacidad en Redes Sociales",Completed = false,CategoryId = 3},
+                    new MyTaskTeen{TaskName = "¿Por qué cuidar nuestros dispositivos?",Completed = false,CategoryId = 4},
+                    new MyTaskTeen{TaskName = "¿Qué es el Pishing?",Completed = false,CategoryId = 4},
+                    new MyTaskTeen{TaskName = "¿Que es el ciberacoso?",Completed = false,CategoryId = 5},
+                    new MyTaskTeen{TaskName = "Upload new ASP.NET video on YouTube",Completed = false,CategoryId = 5},
+                    new MyTaskTeen{TaskName = "¿Por qué importa lo que descargamos?",Completed = false,CategoryId = 6},
+                    new MyTaskTeen{TaskName = "Update github repository",Completed = false,CategoryId = 6},
+                    new MyTaskTeen{TaskName = "¿Por qué son necesarias las actualizaciones?",Completed = false,CategoryId = 7},
+                    new MyTaskTeen{TaskName = "Go for the pepperoni pizza",Completed = false,CategoryId = 7},
+                    new MyTaskTeen{TaskName = "¿Que es la Ingenieria Social?",Completed = false,CategoryId = 8},
+                    new MyTaskTeen{TaskName = "Go for the pepperoni pizza",Completed = false,CategoryId = 8}
                };
             UpdateData();
         }

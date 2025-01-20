@@ -2,11 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Mobile2"
-             Title="Mobile2">
-    <VerticalStackLayout>
+             Title="Seguridad en Dispositivos Móviles">
+    <VerticalStackLayout Spacing="20" Padding="15">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            Text="Cómo Proteger mi Celular de Malware y Hacker"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center" />
+
+        <WebView
+            HeightRequest="300"
+            Source="https://www.youtube.com/embed/BCCgWTjrjVs"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label StyleClass="LightBlue,SubHeader" Text="¿Que se debe verificar al instalar una aplicacion?" />
+
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica1" />
+                <Label Text="Verificar la autenticidad de las aplicaciones y garantizar que no contengan malware."
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxPractica2" />
+                <Label Text="Verificar si es cmopatible con nuestro sistema operativo."
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Terminar"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnEvaluateAnswerClicked" />
     </VerticalStackLayout>
 </ContentPage>
