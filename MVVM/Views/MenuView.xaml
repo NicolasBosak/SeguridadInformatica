@@ -4,39 +4,68 @@
              x:Class="SeguridadInformatica.MVVM.Views.MenuView"
              Title="Menú Principal">
 
-    <Grid RowDefinitions="*, *, *" Padding="20" RowSpacing="15">
-        <!-- Botón 1: Curso para Niños -->
-        <Button 
-            Grid.Row="0"
-            Text="Curso para Niños" 
-            FontSize="20"
-            BackgroundColor="#1A73E8"
-            TextColor="White"
-            CornerRadius="10"
-            Margin="0,10"
-            Command="{Binding NavigateToMainView}" />
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
 
-        <!-- Botón 2: Curso para Adolescentes -->
-        <Button 
-            Grid.Row="1"
-            Text="Curso para Adolescentes" 
-            FontSize="20"
-            BackgroundColor="#34A853"
-            TextColor="White"
-            CornerRadius="10"
-            Margin="0,10"
-            Command="{Binding NavigateToTeenView}" />
+            <!-- Título de la app -->
+            <Label 
+                Text="CybLearn"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="DarkBlue" />
 
-        <!-- Botón 3: Curso para Adultos -->
-        <Button 
-            Grid.Row="2"
-            Text="Curso para Adultos" 
-            FontSize="20"
-            BackgroundColor="#EA4335"
-            TextColor="White"
-            CornerRadius="10"
-            Margin="0,10"
-            Command="{Binding NavigateToAdultView}" />
-    </Grid>
+            <!-- Descripción de la app -->
+            <Label 
+                Text="Esta aplicacion requiere de conexion a internet para los videos. Mantengase conectado."
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                Margin="0,10" />
+
+            <Label 
+                Text="BY: Nicolas Casamen, Mateo Ramirez, Ismael Robalino."
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                Margin="0,10" />
+
+
+            <!-- Grid con los botones -->
+            <Grid RowDefinitions="*, *, *" Padding="20" RowSpacing="15">
+                <!-- Botón 1: Curso para Niños -->
+                <Button 
+                    Grid.Row="0"
+                    Text="Curso para Niños" 
+                    FontSize="20"
+                    BackgroundColor="#1A73E8"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Margin="0,10"
+                    Command="{Binding NavigateToMainView}" />
+
+                <!-- Botón 2: Curso para Adolescentes -->
+                <Button 
+                    Grid.Row="1"
+                    Text="Curso para Adolescentes" 
+                    FontSize="20"
+                    BackgroundColor="#34A853"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Margin="0,10"
+                    Command="{Binding NavigateToTeenView}" />
+
+                <!-- Botón 3: Curso para Adultos -->
+                <Button 
+                    Grid.Row="2"
+                    Text="Curso para Adultos" 
+                    FontSize="20"
+                    BackgroundColor="#EA4335"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Margin="0,10"
+                    Command="{Binding NavigateToAdultView}" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
-
