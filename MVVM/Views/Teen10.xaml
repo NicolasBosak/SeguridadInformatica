@@ -2,11 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen10"
-             Title="Teen10">
-    <VerticalStackLayout>
+             Title="Ciberacoso">
+    <VerticalStackLayout Spacing="20" Padding="15">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            Text="Como Evitar el Ciberacoso"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center" />
+
+        <WebView
+            HeightRequest="300"
+            Source="https://www.youtube.com/embed/tVAjiyNzYq0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand" />
+
+        <Label StyleClass="LightBlue,SubHeader" Text="Cual es una medida ante el acoso?" />
+
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxOption1" />
+                <Label Text="Desinstalar la app"
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="checkBoxOption2" />
+                <Label Text="Ignorar, bloaquear y denunciar."
+                   VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Button Text="Terminar"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Clicked="OnEvaluateAnswerClicked" />
     </VerticalStackLayout>
 </ContentPage>

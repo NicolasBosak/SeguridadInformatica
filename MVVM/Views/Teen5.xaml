@@ -2,11 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen5"
-             Title="Teen5">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Privacidad en Redes Sociales">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="¿Por qué importa la privacidad en redes sociales?"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="La privacidad en redes sociales es fundamental para proteger tu información personal y mantener tu seguridad en línea. Aquí te explicamos por qué:"
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido educativo -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Protege tu identidad: Compartir demasiada información en redes puede exponer datos sensibles como tu ubicación o rutina diaria." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Evita riesgos de suplantación: Los atacantes pueden usar tus fotos o datos personales para crear perfiles falsos y cometer fraudes." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Reduce el ciberacoso: Mantener ciertos aspectos privados puede evitar que extraños malintencionados interactúen contigo o con tu círculo social." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Protege tu reputación: Lo que publicas en redes puede ser visto por futuros empleadores, instituciones educativas o desconocidos, y tener consecuencias inesperadas." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Evita el robo de información: Los ciberdelincuentes pueden usar los datos que compartes para acceder a tus cuentas o realizar estafas." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="Recuerda configurar tus perfiles en redes sociales con opciones de privacidad y compartir únicamente lo necesario."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál es una razón para proteger tu privacidad en redes?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Para evitar que extraños accedan a tu información personal." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Porque no importa qué comparta en redes sociales." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para evaluar respuesta -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

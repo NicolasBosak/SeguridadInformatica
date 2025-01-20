@@ -2,11 +2,88 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen3"
-             Title="Teen3">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Contraseñas Seguras">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="¿Por qué son importantes las contraseñas?"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="Las contraseñas son una de las principales barreras de protección en el mundo digital. Aquí te explicamos por qué son cruciales:"
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Protegen tu información personal: Las contraseñas evitan que personas no autorizadas accedan a tus datos privados, como correos electrónicos, redes sociales y cuentas bancarias." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Previenen accesos no autorizados: Con una contraseña fuerte, puedes bloquear a ciberdelincuentes que intenten entrar en tus cuentas." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Mantienen la seguridad en múltiples dispositivos: Muchas veces usamos los mismos servicios en diferentes equipos. Las contraseñas protegen tus datos en cada uno de ellos." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Reducen el riesgo de robo de identidad: Sin contraseñas seguras, los atacantes pueden hacerse pasar por ti en línea y causar daños." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Son la primera línea de defensa: Aunque hay otras medidas de seguridad, las contraseñas son el primer paso para proteger tu información." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="Recuerda crear contraseñas únicas, largas y difíciles de adivinar para mantener tus cuentas seguras."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Por qué es importante tener contraseñas fuertes?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Para evitar accesos no autorizados." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Porque es obligatorio tenerlas." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para finalizar -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

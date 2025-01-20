@@ -2,11 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen14"
-             Title="Teen14">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Actualizaciones de Software">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="Actualizaciones de Aplicaciones"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="Las actualizaciones de aplicaciones son fundamentales para mantenerlas seguras y optimizadas."
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido educativo -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Seguridad mejorada: Las actualizaciones corrigen vulnerabilidades de seguridad que los atacantes pueden explotar." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Nuevas funciones: Las actualizaciones agregan funciones y mejoras que te permiten aprovechar al máximo la app." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Corrección de errores: Las actualizaciones resuelven fallos y errores que afectan la estabilidad de la app." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Optimización de rendimiento: Las actualizaciones mejoran la velocidad y eficiencia de las aplicaciones." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Compatibilidad con nuevos dispositivos: Las actualizaciones permiten que las aplicaciones funcionen correctamente en versiones más nuevas de sistemas operativos." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="Recuerda siempre mantener tus aplicaciones actualizadas para garantizar su correcto funcionamiento y proteger tu información personal."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta interactiva -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál de las siguientes razones es importante para mantener tus aplicaciones actualizadas?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Mejorar la seguridad y corregir errores." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Conseguir mejoras de interfaz." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para evaluar respuesta -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

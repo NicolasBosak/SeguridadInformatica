@@ -65,12 +65,14 @@
 	  <None Remove="Resources\Images\cloud.jpg" />
 	  <None Remove="Resources\Images\compras.png" />
 	  <None Remove="Resources\Images\data.jpg" />
+	  <None Remove="Resources\Images\dispositivos.jpg" />
 	  <None Remove="Resources\Images\fake.jpg" />
 	  <None Remove="Resources\Images\games.jpg" />
 	  <None Remove="Resources\Images\information.jpg" />
 	  <None Remove="Resources\Images\mail.png" />
 	  <None Remove="Resources\Images\netflix.png" />
 	  <None Remove="Resources\Images\NSP.jpg" />
+	  <None Remove="Resources\Images\robo.jpeg" />
 	  <None Remove="Resources\Images\strange.jpg" />
 	  <None Remove="Resources\Images\strongpin.jpg" />
 	  <None Remove="Resources\Images\update.jpg" />

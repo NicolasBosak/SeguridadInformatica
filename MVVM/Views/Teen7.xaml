@@ -2,11 +2,92 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen7"
-             Title="Teen7">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Seguridad en Dispositivos Móviles">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="¿Por qué es importante cuidar nuestros dispositivos?"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <Image Source="dispositivos.jpg"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="Nuestros dispositivos contienen información personal, acceso a cuentas importantes y nos conectan al mundo digital. Aquí te contamos por qué debes cuidarlos:"
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido educativo -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Proteger nuestra información personal: Nuestros dispositivos almacenan datos sensibles, como contraseñas, fotos y documentos importantes. Un descuido puede resultar en robo de identidad." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Evitar malware y virus: Mantener nuestros dispositivos actualizados y protegidos con software de seguridad reduce el riesgo de infecciones que pueden comprometer nuestros datos." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Garantizar su funcionamiento: Cuidar los dispositivos físicamente y mantenerlos limpios y bien ventilados prolonga su vida útil y evita fallos técnicos." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Evitar gastos innecesarios: Reparar o reemplazar un dispositivo puede ser costoso. Cuidarlos nos ahorra dinero a largo plazo." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Proteger el acceso a nuestras cuentas: Los dispositivos son la llave a nuestras cuentas bancarias, redes sociales y correos. Si los descuidamos, podríamos perder el acceso o ser víctimas de fraude." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="Recuerda mantener tus dispositivos actualizados, utilizar contraseñas fuertes y almacenarlos en lugares seguros."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta interactiva -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál es una razón para cuidar tus dispositivos?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Para proteger nuestra información personal y datos sensibles." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Porque no importa lo que pase con los dispositivos." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para evaluar respuesta -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

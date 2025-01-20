@@ -2,11 +2,94 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen2"
-             Title="Teen2">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Phishing">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="Cómo evitar el phishing"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="Sigue estos consejos para protegerte de intentos de phishing en correos electrónicos, mensajes y sitios web:"
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Lista de consejos -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. No hagas clic en enlaces sospechosos o inesperados, especialmente si provienen de remitentes desconocidos." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Verifica siempre la dirección del remitente. Los correos legítimos suelen venir de dominios confiables." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. No compartas información personal o financiera a través de enlaces enviados por correo o mensaje." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Si un correo o mensaje parece urgente o demasiado bueno para ser verdad, probablemente sea un intento de phishing." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Mantén tu dispositivo y programas actualizados para protegerte contra vulnerabilidades conocidas." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="6. Usa autenticación en dos pasos (2FA) siempre que sea posible para agregar una capa extra de seguridad." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="¡Tu seguridad es importante! Sé cauteloso con la información que compartes en línea y siempre verifica antes de actuar."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Cuál de las siguientes es una recomendación para evitar el phishing?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Evitar hacer clic en enlaces sospechosos." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Compartir información bancaria en cualquier correo recibido." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para finalizar -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

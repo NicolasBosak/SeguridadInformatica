@@ -4,6 +4,7 @@
              x:Class="SeguridadInformatica.MVVM.Views.TeenView"
              xmlns:converters="clr-namespace:SeguridadInformatica.Converters"
              Title="Seguridad Informatica Adolescentes">
+
     <ContentPage.Resources>
         <converters:ColorConverter x:Key="ColorConverter" />
         <Style x:Key="CategoryCardStyle" TargetType="Frame">
@@ -49,6 +50,7 @@
             </CollectionView>
         </Grid>
 
+        <!-- Sección de Tareas -->
         <Grid Grid.Row="2" RowDefinitions=".2*, .8*">
             <Label StyleClass="LightBlue,SubHeader" Text="Tareas Pendientes" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding TasksTeen}"

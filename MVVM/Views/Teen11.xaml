@@ -2,11 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen11"
-             Title="Teen11">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Descargas Seguras">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="¿Por qué importa lo que descargamos en nuestros dispositivos?"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Subtítulo -->
+            <Label 
+                Text="Descargar contenido de forma segura es clave para proteger nuestros dispositivos y datos. Aquí te explicamos las razones:"
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido educativo -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Evitar malware y virus: Descargar archivos de fuentes no confiables puede introducir software malicioso que dañe tu dispositivo o robe tu información." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Proteger tu información personal: Algunos archivos descargados pueden contener spyware que recopila datos como contraseñas, historial de navegación y más." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Ahorrar espacio y recursos: Archivos grandes o innecesarios ocupan espacio en el almacenamiento y pueden ralentizar el rendimiento de tu dispositivo." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. Evitar problemas legales: Descargar contenido protegido por derechos de autor sin permiso puede acarrear multas o problemas legales." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Mantener tu dispositivo funcional: Algunos archivos corruptos o mal diseñados pueden causar fallos en el sistema o afectar la estabilidad del dispositivo." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Nota final -->
+            <Label 
+                Text="Descarga solo de fuentes confiables, verifica los permisos antes de instalar aplicaciones y utiliza un software antivirus para mayor protección."
+                FontSize="16"
+                FontAttributes="Italic"
+                TextColor="Gray"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <!-- Pregunta interactiva -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Por qué debemos cuidar lo que descargamos?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Para evitar virus, malware y pérdida de datos." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Porque descargar cualquier cosa es seguro." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para evaluar respuesta -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

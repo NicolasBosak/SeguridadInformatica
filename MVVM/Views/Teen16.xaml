@@ -2,11 +2,102 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Teen16"
-             Title="Teen16">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Ingeniería Social">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Encabezado -->
+            <Label 
+                Text="¿Cómo Funciona la Ingeniería Social?"
+                FontSize="24" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" 
+                TextColor="DarkBlue" />
+
+            <!-- Descripción general -->
+            <Label 
+                Text="La ingeniería social se basa en manipular el comportamiento humano para obtener acceso a información confidencial o sistemas, sin necesidad de realizar ataques técnicos. Los atacantes explotan la confianza, la curiosidad o la falta de conocimiento de las personas para lograr su objetivo."
+                FontSize="18" 
+                TextColor="Black"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Contenido educativo -->
+            <VerticalStackLayout Spacing="10">
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="1. Manipulación psicológica: Los atacantes utilizan técnicas de manipulación psicológica, como generar urgencia o simular situaciones de confianza, para engañar a sus víctimas." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="2. Creación de pretextos: Los atacantes inventan una historia o situación falsa que hace que la víctima se sienta cómoda compartiendo información o realizando una acción, como hacer clic en un enlace." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="3. Aprovechamiento de la confianza: Los atacantes suelen hacerse pasar por personas o entidades que ya son conocidas por la víctima, como bancos, compañeros de trabajo o incluso familiares." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="4. El phishing como herramienta: Una de las técnicas más comunes es el phishing, donde los atacantes envían correos electrónicos o mensajes engañosos que parecen de fuentes legítimas, pero en realidad buscan robar información personal." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+
+                <Frame BackgroundColor="LightGray" CornerRadius="8" Padding="10">
+                    <Label Text="5. Ejemplos de ataques: Los ataques de ingeniería social pueden incluir correos electrónicos falsos, llamadas telefónicas, mensajes de texto, enlaces maliciosos y más." 
+                           FontSize="16" 
+                           TextColor="Black" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Consejos de prevención -->
+            <Label 
+                Text="Consejos para evitar caer en la ingeniería social:"
+                FontSize="18"
+                FontAttributes="Italic"
+                TextColor="DarkBlue"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,0" />
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="• Desconfía de solicitudes inesperadas de información personal o financiera." 
+                       FontSize="16" 
+                       TextColor="Black" />
+                <Label Text="• No hagas clic en enlaces o archivos adjuntos de fuentes desconocidas." 
+                       FontSize="16" 
+                       TextColor="Black" />
+                <Label Text="• Verifica siempre la autenticidad de las solicitudes a través de canales oficiales." 
+                       FontSize="16" 
+                       TextColor="Black" />
+                <Label Text="• Utiliza contraseñas fuertes y activación de autenticación en dos pasos para proteger tus cuentas." 
+                       FontSize="16" 
+                       TextColor="Black" />
+            </VerticalStackLayout>
+
+            <!-- Pregunta interactiva -->
+            <Label StyleClass="LightBlue,SubHeader" Text="¿Qué técnica es comúnmente utilizada en la ingeniería social?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption1" />
+                    <Label Text="Phishing" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxOption2" />
+                    <Label Text="Descargas de archivos seguros" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Botón para evaluar respuesta -->
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
