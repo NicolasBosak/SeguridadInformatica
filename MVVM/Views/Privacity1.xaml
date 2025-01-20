@@ -2,11 +2,63 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Privacity1"
-             Title="Privacity1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Privacidad en Redes Sociales">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <!-- Título principal -->
+            <Label 
+                Text="Riesgos de compartir demasiado en redes sociales"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Introducción -->
+            <Label 
+                Text="Publicar demasiada información personal en redes sociales puede llevar a problemas como el robo de identidad, ciberacoso o incluso facilitar el acceso a tus cuentas."
+                FontSize="16"
+                LineBreakMode="WordWrap" />
+
+            <!-- Cómo proteger tu privacidad -->
+            <Label 
+                Text="Cómo proteger tu privacidad:"
+                FontSize="20"
+                FontAttributes="Bold"
+                Margin="0,10,0,5" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="1. Configura las opciones de privacidad para limitar quién puede ver tus publicaciones."
+                       FontSize="16" />
+                <Label Text="2. Evita compartir datos sensibles como tu dirección, lugar de trabajo o fotos de documentos personales."
+                       FontSize="16" />
+                <Label Text="3. No aceptes solicitudes de amistad de personas que no conoces."
+                       FontSize="16" />
+                <Label Text="4. Desactiva la ubicación en tiempo real para evitar exponer tu paradero."
+                       FontSize="16" />
+            </VerticalStackLayout>
+
+            <!-- Módulo de preguntas -->
+            <Label 
+                StyleClass="LightBlue,SubHeader" 
+                Text="¿Qué práctica es más segura en redes sociales?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Aceptar solicitudes de amistad de desconocidos."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Configurar las opciones de privacidad."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

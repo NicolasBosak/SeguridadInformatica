@@ -2,11 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Mobile1"
-             Title="Mobile1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Seguridad en Dispositivos Móviles">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <!-- Título principal -->
+            <Label 
+                Text="¿Por qué es importante proteger tu celular?"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Image Source="ajustes.png"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <!-- Descripción -->
+            <Label 
+                Text="Los dispositivos móviles contienen una gran cantidad de datos personales, como correos electrónicos, aplicaciones bancarias y fotos. Sin las medidas adecuadas, pueden ser un objetivo fácil para hackers."
+                FontSize="16"
+                LineBreakMode="WordWrap" />
+
+            <!-- Medidas de seguridad recomendadas -->
+            <Label 
+                Text="Medidas de seguridad recomendadas:"
+                FontSize="20"
+                FontAttributes="Bold"
+                Margin="0,10,0,5" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="• Mantén tu dispositivo actualizado para corregir vulnerabilidades."
+                       FontSize="16" />
+                <Label Text="• Descarga aplicaciones solo desde tiendas oficiales (Google Play o App Store)."
+                       FontSize="16" />
+                <Label Text="• Usa contraseñas o autenticación biométrica (huella digital o reconocimiento facial)."
+                       FontSize="16" />
+                <Label Text="• Instala un antivirus confiable en tu dispositivo."
+                       FontSize="16" />
+            </VerticalStackLayout>
+
+            <!-- Módulo de preguntas -->
+            <Label 
+                StyleClass="LightBlue,SubHeader" 
+                Text="¿Cuál es una práctica recomendada para proteger tu celular?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Descargar aplicaciones desde cualquier página web."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Mantener el dispositivo actualizado."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

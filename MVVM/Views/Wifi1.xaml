@@ -2,11 +2,78 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeguridadInformatica.MVVM.Views.Wifi1"
-             Title="Wifi1">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Uso Seguro de Wi-Fi Público">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <!-- Título principal -->
+            <Label 
+                Text="Riesgos de usar redes Wi-Fi abiertas"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Image Source="calavera.png"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit"
+                   HeightRequest="200" />
+
+            <Label 
+                Text="Wi-Fi públicas: Las redes Wi-Fi públicas, como las que se encuentran en cafeterías o aeropuertos, pueden ser fácilmente hackeadas por ciberdelincuentes. Al conectarte a estas redes, podrías exponer tu información personal a atacantes que estén interceptando el tráfico de internet."
+                FontSize="16"
+                LineBreakMode="WordWrap" />
+
+            <!-- Medidas de seguridad -->
+            <Label 
+                Text="Medidas de seguridad cuando uses Wi-Fi público:"
+                FontSize="20"
+                FontAttributes="Bold"
+                Margin="0,10,0,5" />
+            <VerticalStackLayout Spacing="5">
+                <Label Text="1. Evita realizar transacciones bancarias o ingresar contraseñas mientras estés conectado a una red Wi-Fi pública."
+                       FontSize="16" />
+                <Label Text="2. Usa una VPN (Red Privada Virtual) para cifrar tu conexión y proteger tus datos."
+                       FontSize="16" />
+                <Label Text="3. Desactiva la opción de compartir archivos o conectividad automática en tu dispositivo para prevenir accesos no deseados."
+                       FontSize="16" />
+            </VerticalStackLayout>
+
+            <!-- Consejos adicionales -->
+            <Label 
+                Text="Consejos adicionales:"
+                FontSize="20"
+                FontAttributes="Bold"
+                Margin="0,10,0,5" />
+            <VerticalStackLayout Spacing="5">
+                <Label Text="• Verifica siempre que te estés conectando a una red Wi-Fi legítima, y no a una falsa creada por un atacante."
+                       FontSize="16" />
+                <Label Text="• Desactiva la conexión automática a redes Wi-Fi en tu dispositivo."
+                       FontSize="16" />
+            </VerticalStackLayout>
+
+            <!-- Pregunta sobre el tema -->
+            <Label 
+                StyleClass="LightBlue,SubHeader" 
+                Text="¿Cuál de estas medidas es recomendable para proteger tus datos en una red Wi-Fi pública?" />
+
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica1" />
+                    <Label Text="Usar una VPN para cifrar tu conexión."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="checkBoxPractica2" />
+                    <Label Text="Realizar transacciones bancarias sin protección."
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button 
+                Text="Evaluar Respuesta"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Clicked="OnEvaluateAnswerClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
