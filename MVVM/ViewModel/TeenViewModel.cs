@@ -1,5 +1,6 @@
 ﻿using PropertyChanged;
 using SeguridadInformatica.MVVM.Models;
+using SeguridadInformatica.MVVM.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -29,75 +30,67 @@ namespace SeguridadInformatica.MVVM.ViewModel
 
             if (taskName == "¿Qué son las estafas en línea?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen1());
             }
             else if (taskName == "Cómo Evitar Estafas en Internet")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen2());
             }
             else if (taskName == "¿Por qué son importantes las contraseñas fuertes?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen3());
             }
             else if (taskName == "Como crear contraseñas fuertes")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen4());
             }
             else if (taskName == "Riesgos de Compartir Demasiado en Redes Sociales")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen5());
             }
             else if (taskName == "Recomendaciones para proteger tu información")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen6());
             }
             else if (taskName == "¿Por qué es importante proteger tu celular?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen7());
             }
             else if (taskName == "Cómo Proteger mi Celular de Malware y Hacker")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen8());
             }
             else if (taskName == "¿Qué es el phishing?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen9());
             }
             else if (taskName == "Cómo Evitar Ataques de Phishing")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen10());
             }
             else if (taskName == "¿Por qué son importantes las actualizaciones?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen11());
             }
             else if (taskName == "Ventajas y Desventaja de Actualizar")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen12());
             }
             else if (taskName == "Cómo Comprar de Forma Segura en Internet")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen13());
             }
             else if (taskName == "¿Cómo evitar fraudes en compras por internet?")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen14());
             }
             else if (taskName == "Riesgos de Usar Redes Wi-Fi Abiertas")
             {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen15());
             }
             else if (taskName == "¿Cómo Protegerme para Navegar Seguro al usar una Red WiFi Pública?")
             {
-                await navigation.PushAsync(new ());
-            }
-            else if (taskName == "¿Qué es la nube?")
-            {
-                await navigation.PushAsync(new ());
-            }
-            else if (taskName == "La Seguridad en la Nube")
-            {
-                await navigation.PushAsync(new ());
+                await navigation.PushAsync(new Teen16());
             }
             else
             {
